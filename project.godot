@@ -11,8 +11,9 @@ config_version=3
 [application]
 
 config/name="ukamnad"
+run/main_scene="res://src/Player/player.tscn"
 config/icon="res://icon.png"
 
-[rendering]
+[display]
 
-environment/default_environment="res://default_env.tres"
+window/size/resizable=false
