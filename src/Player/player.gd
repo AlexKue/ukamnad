@@ -32,4 +32,9 @@ func _process(delta):
 func _on_Player_hit():
 	hide()
 	emit_signal("hit")
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.disabled = true # prevent player from emitting multiple hit signals
+
+func start (pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false #enable collision
