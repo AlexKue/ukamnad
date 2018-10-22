@@ -1,11 +1,12 @@
 extends Node2D
 
 var speed
+var screensize
 
 # Called when the node is added to the scene for the first time.
 func _ready():
 	speed = 200;
-	pass
+	screensize = get_viewport().size
 
 # Called every frame. Delta is time since last frame.
 func _process(delta):
@@ -23,5 +24,7 @@ func _process(delta):
 	direction = direction.normalized() * speed * delta
 	
 	translate(direction)
+	position.x = clamp(position.x, 0, screensize.x)
+	position.y = clamp(position.y, 0, screensize.y)
 	
 	pass
