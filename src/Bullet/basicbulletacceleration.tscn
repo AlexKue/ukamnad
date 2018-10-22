@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Bullet/basicbullet.gd" type="Script" id=1]
+[ext_resource path="res://Area2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bullet/Bullet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="BasicBullet" type="Area2D" index="0"]
+[node name="BasicBulletAcceleration" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -22,12 +22,11 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 1.3411e-07, 0.0282787 )
-scale = Vector2( 0.241475, 0.228422 )
+position = Vector2( -0.0213128, 0.0136542 )
+scale = Vector2( 0.237124, 0.230598 )
 shape = SubResource( 1 )
 
 

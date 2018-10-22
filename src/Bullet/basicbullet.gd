@@ -11,4 +11,3 @@ func _ready():
 
 func _process(delta):
 	global_translate(direction * speed * delta)
-
