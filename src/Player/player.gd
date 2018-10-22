@@ -1,5 +1,7 @@
 extends Node2D
 
+signal hit
+
 var speed
 var screensize
 
@@ -26,5 +28,8 @@ func _process(delta):
 	translate(direction)
 	position.x = clamp(position.x, 0, screensize.x)
 	position.y = clamp(position.y, 0, screensize.y)
-	
-	pass
+
+func _on_Player_hit():
+	hide()
+	emit_signal("hit")
+	$CollisionShape2D.disabled = true

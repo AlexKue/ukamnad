@@ -30,4 +30,6 @@ shape = SubResource( 1 )
 
 texture = ExtResource( 2 )
 
+[connection signal="hit" from="." to="." method="_on_Player_hit"]
+
 
